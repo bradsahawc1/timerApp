@@ -29,12 +29,12 @@ class Timer {
         if (this.timeRemaining <= 0) {
             this.pause();
             if (this.onComplete) {
-                this.onComplete;
+                this.onComplete();
             }
         } else {
             this.timeRemaining = this.timeRemaining - 1;
             if (this.onTick) {
-                this.onTick;
+                this.onTick();
             }
         }
     };
